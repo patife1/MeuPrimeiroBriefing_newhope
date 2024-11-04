@@ -110,5 +110,3 @@ R. Skate Shop, DuHype, Infinity Surf, os concorrentes possuem loja física e já
 25. O que não pode haver no web site, em função dos concorrentes?
 
 R. O cliente não quer bugs no site.
-
-Teste
