@@ -14,7 +14,7 @@ R. Coletor de informações.
 
 3. Quais são as mensagens mais importantes que o site deve passar aos visitantes?
 
-R.  
+R. Confiança, suporte ao cliente, facilidade de acesso, ofertas.
 
 4.  Quais são os planos para promover o site?
 
