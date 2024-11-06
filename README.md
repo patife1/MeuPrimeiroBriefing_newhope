@@ -63,7 +63,7 @@
 
 14- Qual a "capacidade técnica" de acesso de seus usuários (navegador, velocidade de acesso, tempo de acesso diário, etc)?
 
-- Pode ser acessado de qualquer navegador.
+- 1000 acessos simultâneos.
 
 ## Conteúdo
 
@@ -85,7 +85,7 @@
 
 19- Tem em mente alguma aparência para o web site? 
 
-- Sim.
+- Site com fundo branco e preto, com as cores da logo, um carrosel passando as imagens para o lado, ícones das categorias, e os anuncios.
 
 20- Existem padrões existentes, como logotipos e cores, que devem estar presentes?
 
