@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.font-navbar {
+    font-size: 50pt;
+}
