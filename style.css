@@ -1,6 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #fffafa;
     margin: 0;
     padding: 0;
 }
@@ -14,6 +14,6 @@ footer a {
     text-decoration: none;
 }
 
-.font-navbar {
-    font-size: 50pt;
+.fontnavbar {
+    font-size: 15pt;
 }
