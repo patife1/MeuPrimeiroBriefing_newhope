@@ -26,10 +26,7 @@
                 <a href="catalogo.html" class="nav-link text-dark font-navbar"><strong>Cátalogo</strong></a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-navbar">Promoções</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link text-dark font-navbar"><i class="bi bi-cart"></i>🛒</a>
+                <a href="favoritos.html" class="nav-link text-dark font-navbar" id="favoritos-link"><i class="bi bi-cart"></i> Favoritos</a>
             </li>
         </ul>
     </nav>
@@ -37,37 +34,105 @@
     <!-- DETALHES DO PRODUTO -->
     <section class="container my-5">
         <div class="row">
+            <!-- Carrossel -->
             <div class="col-md-6">
-                <img src="img/cogu.webp" class="img-fluid" alt="Produto 1">
+                <div id="carouselProduto" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Imagem 1 -->
+                        <div class="carousel-item active">
+                            <img src="img/cogu.webp" class="d-block w-100" alt="Camiseta Chronic 4013">
+                        </div>
+                        <!-- Imagem 2 -->
+                        <div class="carousel-item">
+                            <img src="img/melo.webp" class="d-block w-100" alt="Camiseta Chronic 4013">
+                        </div>
+                    </div>
+                    <!-- Controles do Carrossel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduto" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProduto" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
             </div>
+
+            <!-- Informações do Produto -->
             <div class="col-md-6">
                 <h2>Camiseta Chronic 4013</h2>
-                <p>Camiseta Chronic 4013 </br></p>
+                <p>Camiseta Chronic 4013</p>
                 
-                <p><strong>Preço: R$ 129,90</strong></p>
+                <p><strong>Preço: R$ 128,90</strong></p>
                 
                 <label for="tamanho">Tamanho:</label>
                 <select id="tamanho" class="form-select mb-3">
-                    <option>PP</option>
                     <option>P</option>
                     <option>M</option>
                     <option>G</option>
                     <option>GG</option>
                 </select>
 
-                <button class="btn btn-dark">Adicionar ao carrinho</button>
 
-                <!-- Link para WhatsApp com mensagem personalizada -->
-                <a href="https://api.whatsapp.com/send?phone=5531985079718&text=Opa,%20essa%20Camiseta%20Chronic%204013%20est%C3%A1%20dispon%C3%ADvel%3F" target="_blank">
-                    <button class="btn btn-dark">Comprar</button>
-                </a>
+                <!-- Botões de Favoritar e Comprar, agora lado a lado -->
+                <div class="d-flex mt-3">
+                    <button class="btn btn-white me-3" id="favoritarBtn" onclick="favoritarItem('Camiseta Chronic 4013')">
+                        <img src="img/heart-1179072_640.png" height="23px" width="23" id="favoritoIcon">
+                    </button>
+                    <a href="https://api.whatsapp.com/send?phone=5531985079718&text=Opa,%20essa%20Camiseta%20Chronic%204013%20est%C3%A1%20dispon%C3%ADvel%3F" target="_blank">
+                        <button class="btn btn-dark">Comprar</button>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-
     <!-- FOOTER (Reutilizado) -->
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        function favoritarItem(itemID) {
+            // Obtém a lista de favoritos do localStorage, ou um array vazio se não houver
+            let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+            // Verifica se o item já está favoritado
+            if (favoritos.includes(itemID)) {
+                // Se já estiver favoritado, remove o item
+                favoritos = favoritos.filter(id => id !== itemID);
+           
+            } else {
+                // Se não estiver favoritado, adiciona o item
+                favoritos.push(itemID);
+                
+            }
+
+            // Atualiza o localStorage com a nova lista de favoritos
+            localStorage.setItem('favoritos', JSON.stringify(favoritos));
+
+            // Atualiza o visual do botão de favorito
+            atualizarBotaoFavorito(itemID);
+        }
+
+        // Função para atualizar o estado do botão de favorito
+        function atualizarBotaoFavorito(itemID) {
+            let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+            let botao = document.getElementById('favoritoIcon'); // O ícone do coração
+
+            // Verifica se o item está nos favoritos e altera o ícone
+            if (favoritos.includes(itemID)) {
+                botao.src = 'img/filled .png';  // Coração preenchido
+            } else {
+                botao.src = 'img/heart-1179072_640.png';  // Coração vazio
+            }
+        }
+
+        // Verifica o estado do favorito ao carregar a página
+        window.onload = function() {
+            // Chama a função para atualizar o estado do botão (se o item já está favoritado ou não)
+            atualizarBotaoFavorito('Camiseta Chronic 4013');
+        }
+    </script>
 </body>
 </html>
