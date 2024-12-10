@@ -7,65 +7,11 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        /* Ajustes para o carrossel principal */
-        #carrossel {
-            width: 100%;
-            margin-top: 0px;
-        }
-
-        .carousel-item img {
-            width: 100%;
-            height: auto; /* Isso mantém a proporção original da imagem */
-        }
-
-        /* Ajustes para os controles do carrossel */
-        .carousel-control-prev, .carousel-control-next {
-            z-index: 10;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .carousel-control-prev {
-            left: 5px;
-        }
-
-        .carousel-control-next {
-            right: 5px;
-        }
-
-        /* Carrossel de marcas */
-        #marcas-carrossel {
-            margin-top: 1px;
-        }
-
-        .carousel-inner {
-            display: flex;
-            overflow: hidden;
-        }
-
-        .carousel-item {
-            flex: 0 0 auto;
-            width: 100%; /* Ajuste o tamanho das imagens no carrossel de marcas */
-            margin-right: 10px;
-        }
-
-        .carousel-item img {
-            width: 100%; /* A imagem ocupa 100% do espaço disponível */
-            height: auto;
-            object-fit: contain;
-        }
-
-        /* Garantir que as imagens de marcas fiquem centralizadas */
-        .carousel-item img {
-            display: block;
-            margin: 0 auto;
-        }
-    </style>
 </head>
-<body>
+
+      <body>
 
     <!-- HEADER -->
     <header class="bg-dark text-white text-center py-3">
@@ -122,7 +68,7 @@
     <style>
         /* transicao suave ao mudar de imagem */
         .carousel-inner {
-            transition: transform 0.2s ease-in-out;
+            transition: transform 0.1s ease-in-out;
         }
     
     
@@ -134,52 +80,61 @@
         .carousel-item.active {
             opacity: 1; 
         }
-    </style>
-    
+        section {
+    margin-top: 50px;  /* Espaço entre o cabeçalho e o carrossel */
+    margin-bottom: 50px; /* Espaço entre o carrossel e o rodapé */
+}
 
-    <!-- MARCAS -->
-    <section id="marcas-carrossel" class="my-5">
-        <h2 class="text-center">Marcas</h2>
-        <div id="marcaCarousel" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="img/marca1.png" class="d-block w-100" alt="Marca 1">
-                        </div>
-                        <div class="col-4">
-                            <img src="img/marca2.png" class="d-block w-100" alt="Marca 2">
-                        </div>
-                        <div class="col-4">
-                            <img src="img/marca3.png" class="d-block w-100" alt="Marca 3">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="img/marca4.png" class="d-block w-100" alt="Marca 4">
-                        </div>
-                        <div class="col-4">
-                            <img src="img/marca5.png" class="d-block w-100" alt="Marca 5">
-                        </div>
-                        <div class="col-4">
-                            <img src="img/marca6.png" class="d-block w-100" alt="Marca 6">
-                        </div>
-                    </div>
-                </div>
-                <!-- Adicione mais itens aqui conforme necessário -->
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilo individual para cada imagem */
+.marca-high {
+    width: 100%;  /* A largura será 100% do seu contêiner */
+    height: 60px;  /* Altura fixa */
+    object-fit: contain;  /* Manter a proporção da imagem */
+}
+
+.marca-chronic {
+    width: auto;  /* A largura será automática */
+    height: 80px;  /* Altura fixa */
+    object-fit: contain;
+}
+
+.marca-suf {
+    width: auto;  /* A largura será automática */
+    height: 80px;  /* Altura fixa */
+    object-fit: contain;
+}
+
+/* Espaçamento entre as imagens */
+.col-4 img {
+    margin: 0 50px;  /* Ajuste o espaço entre as imagens */
+    display: flex;
+}
+    </style>
+  <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src="img/high-removebg-preview.png" class="marca-high" alt="Marca HIGH">
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#marcaCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#marcaCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
-            </button>
+            <div class="col-4">
+                <img src="img/chronic.png" class="marca-chronic" alt="Marca CHRONIC">
+            </div>
+            <div class="col-4">
+                <img src="img/suf.png" style="height: 130px; width: auto;" class="marca-suf" alt="Marca GANG">
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     
 
     <!-- FOOTER -->
