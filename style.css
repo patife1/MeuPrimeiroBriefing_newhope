@@ -1,3 +1,18 @@
+
+header {
+    position: relative;
+}
+
+
+
+
+.fav-container {
+    position: absolute;
+    top: 70px;
+    right: 29px;
+}
+
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #fffafa;
@@ -22,8 +37,8 @@ body {
         opacity: 1; 
     }
     section {
-margin-top: 50px;  /* espaço entre o cabeçalho e o carrossel */
-margin-bottom: 50px; /* espaço entre o carrossel e o rodape */
+margin-top: 0px;  /* espaço entre o cabeçalho e o carrossel */
+margin-bottom: 100px; /* espaço entre o carrossel e o rodape */
 }
 
 .row {
@@ -34,7 +49,7 @@ justify-content: center;
 /* estilo individual para cada imagem */
 .marca-high {
 width: 115px;  /* a largura será 100% do seu contêiner */
-height: 50px;  /* altura fixa */
+height: 1000px;  /* altura fixa */
 object-fit: contain;  /* manter a proporção da imagem */
 }
 
@@ -51,6 +66,13 @@ object-fit: contain;
 }
 
 
+#carrossel {
+    margin-bottom: 0px; /* Define uma margem inferior pequena */
+}
+
+section > .container {
+    padding-top: 20px; /* Adiciona um pouco de espaço no topo da seção */
+}
 
 
 .logo {
@@ -58,9 +80,45 @@ object-fit: contain;
     font-weight: bold;
 }
 
-footer a {
-    text-decoration: none;
+footer  {
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 0; /* Posiciona o rodapé na parte inferior */
+    width: 100%; /* Ocupa toda a largura da página */
+    padding: 10px 0;
+    text-align: center;
 }
+.social-icons {
+    position: absolute;
+    bottom: 10px; /* Ajusta a posição dos ícones 10px acima do fundo */
+    right: 15px;  /* Posiciona os ícones 10px da borda direita */
+    display: block; /* Exibe os ícones em linha (horizontalmente) */
+    gap: 0px; /* Espaço entre os ícones */
+}
+
+.social-icons a {
+    text-decoration: none; /* Remove sublinhado */
+}
+
+/* Tamanho padrão para os ícones (Instagram) */
+.social-icons img {
+    width: 50px; /* Tamanho padrão para o Instagram */
+    height: 50px; /* Tamanho padrão para o Instagram */
+}
+
+/* Tamanho específico para o ícone do WhatsApp */
+.social-icons .whatsapp-icon {
+    width: 61px; /* Define um tamanho maior para o WhatsApp */
+    height: 61px; /* Define um tamanho maior para o WhatsApp */
+}
+
+.social-icons a:hover img {
+    opacity: 0.8; /* Efeito ao passar o mouse */
+    transition: opacity 0.3s ease;
+}
+
+
 
 .fontnavbar {
     font-size: 15pt;
