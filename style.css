@@ -5,6 +5,54 @@ body {
     padding: 0;
 }
 
+
+
+    /* transicao suave ao mudar de imagem */
+    .carousel-inner {
+        transition: transform 0.1s ease-in-out;
+    }
+
+
+    .carousel-item {
+        transition: all 0.3s ease-in-out; /*transicao*/
+        opacity: 0;
+    }
+
+    .carousel-item.active {
+        opacity: 1; 
+    }
+    section {
+margin-top: 50px;  /* espaço entre o cabeçalho e o carrossel */
+margin-bottom: 50px; /* espaço entre o carrossel e o rodape */
+}
+
+.row {
+display: flex;
+justify-content: center;
+}
+
+/* estilo individual para cada imagem */
+.marca-high {
+width: 115px;  /* a largura será 100% do seu contêiner */
+height: 50px;  /* altura fixa */
+object-fit: contain;  /* manter a proporção da imagem */
+}
+
+.marca-chronic {
+width: 20px;  /* A largura será automática */
+height: 8px;  /* Altura fixa */
+object-fit: contain;
+}
+
+.marca-suf {
+width: auto;  /* A largura será automática */
+height: 80px;  /* Altura fixa */
+object-fit: contain;
+}
+
+
+
+
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
