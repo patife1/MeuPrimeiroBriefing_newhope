@@ -4,6 +4,14 @@ header {
 }
 
 
+.logo img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img:hover {
+    transform: translateY(-10px); /* Move a logo para cima */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave para o efeito de relevo */
+}
 
 
 .fav-container {
@@ -11,6 +19,54 @@ header {
     top: 50px;
     right: 49px;
 }
+
+/* Barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Inicialmente oculta à esquerda */
+    width: 300px;
+    height: 100%;
+    background-color: #000000bb;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease; /* Para animação suave ao abrir e fechar */
+    z-index: 1000; /* Para garantir que a barra lateral fique acima de outros elementos */
+}
+
+.sidebar-content {
+    margin-bottom: 20px;
+}
+
+#sidebarToggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 000;
+}
+
+.hamburger-icon i {
+    font-size: 30px;
+    color: white;
+}
+
+#sidebarToggle:hover .bar {
+    background-color: #d9534f; /* Mudando a cor ao passar o mouse */
+}
+
+/* Estilo do botão de fechar na barra lateral */
+#closeSidebar {
+    margin-top: 20px;
+    background-color: #d9534f;
+    border: none;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
 
 
 body {
@@ -24,13 +80,13 @@ body {
 
     /* transicao suave ao mudar de imagem */
     .carousel-inner {
-        transition: transform 0.1s ease-in-out;
+        transition: transform 0.5s ease-in-out;
     }
 
 
     .carousel-item {
         transition: all 0.3s ease-in-out; /*transicao*/
-        opacity: 0;
+        opacity: 10;
     }
 
     .carousel-item.active {
@@ -71,7 +127,7 @@ object-fit: contain;
 
 .marca-suf:hover {
     transform: translateY(-10px); /* Move a imagem para cima */
-    box-shadow: 0px 5px 15px rgb(255, 255, 255); /* Cria uma sombra suave para o efeito de relevo */
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2); /* Cria uma sombra suave para o efeito de relevo */
 }
 
 #carrossel {
