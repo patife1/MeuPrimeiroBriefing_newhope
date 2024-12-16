@@ -24,6 +24,68 @@ header {
 .sidebar {
     position: fixed;
     top: 0;
+    left: 0px; /* Inicialmente oculta à esquerda */
+    width: 300px;
+    height: 100%;
+    background-color: #000000bb;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease; /* Para animação suave ao abrir e fechar */
+    z-index: 1000; /* Para garantir que a barra lateral fique acima de outros elementos */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos de forma vertical */
+    justify-content: flex-start; /* Alinha os itens no topo */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.sidebar-content {
+    margin-bottom: 0px;
+    text-align: center; /* Centraliza o conteúdo da sidebar */
+}
+
+#sidebarToggle {
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    width: 35px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.hamburger-icon i {
+    font-size: 30px;
+    color: white;
+}
+/* Estilo para a lista de tópicos */
+#topicList {
+    list-style-type: none; /* Remove as marcas de lista */
+    padding: 0; /* Remove o padding da lista */
+    margin: 0; /* Remove as margens da lista */
+    flex-grow: 1; /* Faz a lista ocupar o espaço disponível */
+}
+
+/* Estilo para os botões de tópico */
+.topicButton {
+    background-color: #25a857; /* Cor de fundo dos botões */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 5px 0; /* Espaço entre os botões */
+    width: 100%; /* Botões ocupando toda a largura */
+    border: none; /* Remove a borda */
+    border-radius: 2px; /* Bordas arredondadas */
+    text-align: center;
+    cursor: pointer; /* Mostra o cursor de clique */
+}
+
+.topicButton:hover {
+    background-color: #89c471; /* Cor de fundo ao passar o mouse */
+}
+
+
+/* Barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
     left: -300px; /* Inicialmente oculta à esquerda */
     width: 300px;
     height: 100%;
@@ -32,41 +94,57 @@ header {
     padding: 20px;
     transition: left 0.3s ease; /* Para animação suave ao abrir e fechar */
     z-index: 1000; /* Para garantir que a barra lateral fique acima de outros elementos */
+    display: flex;
+    flex-direction: column; /* Organiza os itens de forma vertical */
+    justify-content: flex-start; /* Alinha os itens no topo */
+    align-items: stretch; /* Faz a barra ocupar a largura total */
 }
 
+/* Conteúdo da barra lateral */
 .sidebar-content {
     margin-bottom: 20px;
+    text-align: center; /* Centraliza o conteúdo dentro da sidebar */
 }
 
-#sidebarToggle {
+/* Barra lateral */
+.sidebar {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-    z-index: 000;
-}
-
-.hamburger-icon i {
-    font-size: 30px;
+    top: 0;
+    left: -300px; /* Inicialmente oculta à esquerda */
+    width: 300px;
+    height: 100%;
+    background-color: #000000bb;
     color: white;
+    padding: 20px;
+    transition: left 0.3s ease; /* Para animação suave ao abrir e fechar */
+    z-index: 1000; /* Para garantir que a barra lateral fique acima de outros elementos */
+    display: flex;
+    flex-direction: column; /* Organiza os itens de forma vertical */
+    justify-content: flex-start; /* Alinha os itens no topo */
+    align-items: stretch; /* Faz a barra ocupar a largura total */
 }
 
-#sidebarToggle:hover .bar {
-    background-color: #d9534f; /* Mudando a cor ao passar o mouse */
+/* Conteúdo da barra lateral */
+.sidebar-content {
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o conteúdo dentro da sidebar */
 }
 
-/* Estilo do botão de fechar na barra lateral */
+/* Botão de fechar na barra lateral */
 #closeSidebar {
-    margin-top: 20px;
-    background-color: #d9534f;
-    border: none;
-    padding: 10px;
-    color: white;
+    margin-top: auto; /* Empurra o botão para o fundo da barra lateral */
+    background-color: #000000; /* Cor do fundo do botão */
+    padding: 0px 20px; /* Adiciona um pouco mais de espaçamento horizontal */
+    color: rgb(255, 0, 0); /* Cor do texto */
     cursor: pointer;
+    font-size: 25px; /* Tamanho da fonte */
+    width: 80%; /* Faz o botão ocupar 80% da largura da barra lateral */
+    text-align: center; /* Garante que o texto do botão fique centralizado */
+    border: none; /* Remove a borda */
+    height: 50px; /* Altura do botão */
+    border-radius: 0px; /* Bordas arredondadas */
+    align-self: center; /* Centraliza o botão horizontalmente */
 }
-
 
 
 body {
