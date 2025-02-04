@@ -10,16 +10,16 @@ sidebarToggle.addEventListener("click", (event) => {
 });
 
 // Fecha a barra lateral ao clicar nela mesma
-sidebar.addEventListener("click", (event) => {
-    event.stopPropagation(); // Impede que o clique na área interna feche a barra lateral
+sidebar.addEventListener("click", () => {
+    sidebar.style.left = "-300px"; // Move a barra lateral para fora da tela
 });
 
 // Fecha a barra lateral ao clicar no botão de fechar
 closeSidebar.addEventListener("click", () => {
-    sidebar.style.left = "-300px"; // Move a barra lateral para fora da tela
+    sidebar.style.left = "-300px"; 
 });
 
-// Impede que a barra lateral feche se clicar dentro dela
-sidebar.querySelector('.sidebar-content').addEventListener("click", (event) => {
-    event.stopPropagation(); // Impede que o clique na área interna feche a barra lateral
+
+sidebar.querySelector('.sidebar-content').addEventListener("click", () => {
+    sidebar.style.left = "-300px"; // Fecha a barra lateral
 });

@@ -66,13 +66,13 @@ header {
 
 /* Estilo para os botões de tópico */
 .topicButton {
-    background-color: #25a857; /* Cor de fundo dos botões */
-    color: rgb(0, 0, 0); /* Cor do texto */
+    background-color: #25a85798; /* Cor de fundo dos botões */
+    color: rgb(243, 239, 13); /* Cor do texto */
     padding: 10px 20px; /* Espaçamento interno */
     margin: 5px 0; /* Espaço entre os botões */
     width: 100%; /* Botões ocupando toda a largura */
     border: none; /* Remove a borda */
-    border-radius: 2px; /* Bordas arredondadas */
+    border-radius: 6px; /* Bordas arredondadas */
     text-align: center;
     cursor: pointer; /* Mostra o cursor de clique */
 }
@@ -124,27 +124,7 @@ header {
     align-items: stretch; /* Faz a barra ocupar a largura total */
 }
 
-/* Conteúdo da barra lateral */
-.sidebar-content {
-    margin-bottom: 20px;
-    text-align: center; /* Centraliza o conteúdo dentro da sidebar */
-}
 
-/* Botão de fechar na barra lateral */
-#closeSidebar {
-    margin-top: auto; /* Empurra o botão para o fundo da barra lateral */
-    background-color: #000000; /* Cor do fundo do botão */
-    padding: 0px 20px; /* Adiciona um pouco mais de espaçamento horizontal */
-    color: rgb(255, 0, 0); /* Cor do texto */
-    cursor: pointer;
-    font-size: 25px; /* Tamanho da fonte */
-    width: 80%; /* Faz o botão ocupar 80% da largura da barra lateral */
-    text-align: center; /* Garante que o texto do botão fique centralizado */
-    border: none; /* Remove a borda */
-    height: 50px; /* Altura do botão */
-    border-radius: 0px; /* Bordas arredondadas */
-    align-self: center; /* Centraliza o botão horizontalmente */
-}
 
 
 body {
